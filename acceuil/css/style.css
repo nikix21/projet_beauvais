@@ -56,10 +56,10 @@ header nav img{
 }
 
 @media only screen and (max-width: 1214px){
-    .navbar-nav{
+    /*.navbar-nav{
         background-color: aqua;
         visibility: hidden;
-    }
+    }*/
     .hnavbar-toggler-icon{
         visibility: visible;
     }
