@@ -187,8 +187,8 @@ header nav img{
 .beauvaisCard{
     font-weight: bold;
     position: relative;
-    width: 240px;
-    height: 200px;
+    width: 200px;
+    height: 160px;
     padding: 30px;
     margin: 5px;
     cursor: pointer;
@@ -241,8 +241,8 @@ header nav img{
     padding-left: 20px;
     font-weight: bold;
     position: relative;
-    width: 240px;
-    height: 200px;
+    width: 200px;
+    height: 160px;
     transition: all 1s;
     margin-left: 9em;
     border-radius: 8px;
@@ -276,8 +276,8 @@ header nav img{
 .territoirCard{
     font-weight: bold;
     position: relative;
-    width: 240px;
-    height: 200px;
+    width: 200px;
+    height: 160px;
     padding: 30px;
     margin: 5px;
     cursor: pointer;
