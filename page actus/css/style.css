@@ -1,0 +1,318 @@
+
+
+/******************************************************************************************************************/
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;
+    background: #fafafa;
+    box-shadow: inset 0px -1px 0px #335494; /* petite bordure en bas */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+#logoNav {
+    width: 200px;
+}
+
+.hamburger {
+    display: none;
+}
+
+.navlinks-container a {
+    margin: 0 10px;
+    font-size: 19px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #414141;
+    display: inline-block;
+    position: relative;
+}
+
+.navlinks-container a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    width: 100%;
+    height: 1px;
+    transform: scaleX(0);
+    transform-origin: left;
+    background: #333;
+    transition: transform 0.3s ease-out;
+}
+
+.navlinks-container a:hover::after {
+    transform: scaleX(1);
+}
+
+@media (max-width: 900px) {
+    nav {
+        padding: 15px 20px;
+        position: relative;
+    }
+
+    .logo {
+        order: 2;
+        margin: 0 auto;
+    }
+
+    #logoNav {
+        width: 175px;
+    }
+
+    .hamburger {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        border: none;
+        display: flex;
+        background: #fafafa;
+        align-items: center;
+        position: relative;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #335494;
+        position: absolute;
+        pointer-events: none;
+        transition: opacity 0.3s 0.15s ease-out;
+    }
+
+    .hamburger span:nth-child(1) {
+        transform: translateY(7px);
+    }
+
+    .hamburger span:nth-child(3) {
+        transform: translateY(-7px);
+    }
+
+    .hamburger span:nth-child(1), .hamburger span:nth-child(3) {
+        transition: transform 0.3s ease-out;
+    }
+
+    .hamburger.open span:nth-child(1) {
+        transform: translate(0) rotate(135deg);
+    }
+
+    .hamburger.open span:nth-child(2) {
+        opacity: 0;
+        transition: opacity 0s ease-out;
+    }
+
+    .hamburger.open span:nth-child(3) {
+        transform: translate(0) rotate(-135deg);
+    }
+
+    .navlinks-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        background: #fafafa;
+        top: 100%;
+        left: 0;
+        height: 100vh;
+        padding: 15px 50px 15px 20px;
+        border-right: 1px solid #335494;
+        transform: translate(-100%);
+    }
+
+    .open {
+        transform: translate(0%);
+        z-index: 10;
+    }
+
+    .navlinks-container.open {
+        padding: 60px;
+    }
+
+    .navlinks-container a {
+        font-size: 18px;
+        margin: 10px 0px;
+    }
+
+}
+
+@media (max-width: 500px) {
+    #logoNav {
+        width: 135px;
+    }
+}
+
+
+
+/******************************************************************************************************************/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f1f1f1;
+    font-family: "Lato", sans-serif;
+}
+
+.PageComplete {
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+h1 {
+    margin: auto;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 40px;
+    color: #ed5d34;
+
+}
+
+/* h1 {
+    color: #1a2f42;
+    margin: 20px 0;
+    padding-bottom: 30px;
+    border-bottom: 1px dashed gray;
+}
+
+h1 span {
+    display: block;
+}
+
+h1 span:nth-child(1) {
+    font-weight: normal;
+    color: red;
+} */
+
+.actus {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 30px;
+    margin: 80px 0;
+}
+
+.actusRecentes {
+    display: grid;
+    border: 0px solid red;
+    grid-template-columns: repeat(auto-fill, minmax(440px, 1fr));
+    justify-content: center;
+    grid-gap: 50px;
+    margin: 80px 0;
+}
+
+.actus {
+    padding-top: 20px;
+    border-top: 2px dashed black;
+}
+
+.card-wrapper, .card-wrapperBis {
+    position: relative;
+    min-height: 350px;
+    perspective: 2000px;
+    perspective-origin: left;
+}
+
+.card-wrapper:hover .card, .card-wrapperBis:hover .card {
+    transform: rotateY(180deg);
+}
+
+.card {
+    position: relative;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.8,0,0.07,1);
+    color: white;
+    font-weight: bold;
+}
+
+.card-FaceAvant, .card-FaceArriere {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    border-radius: 8px;
+    backface-visibility: hidden;
+}
+
+/* ---------------------------------------------------------- */
+
+.card-wrapperBis:nth-child(1) .card-FaceAvant {
+    background: url("../image/actus/accompagnement-professionnel.jpg");
+    background-size: cover;
+    background-position: bottom;
+}
+
+.card-wrapperBis:nth-child(2) .card-FaceAvant {
+    background: url("../image/actus/relais-tourisme.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.card-wrapper:nth-child(1) .card-FaceAvant {
+    background: url("../image/actus/micro-foret.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.card-wrapper:nth-child(2) .card-FaceAvant {
+    background: url("../image/actus/lucienne.jpg");
+    background-size: cover;
+    background-position: top;
+}
+
+.card-wrapper:nth-child(3) .card-FaceAvant {
+    background: url("../image/actus/journee-plante.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.card-wrapper:nth-child(4) .card-FaceAvant {
+    background: url("../image/actus/halle-bulle.jpg");
+    background-size: cover;
+    background-position: top;
+}
+
+.card-wrapper:nth-child(5) .card-FaceAvant {
+    background: url("../image/actus/enol.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.card-wrapper:nth-child(6) .card-FaceAvant {
+    background: url("../image/actus/tri.jpg");
+    background-size: cover;
+    background-position: bottom;
+}
+
+/* ---------------------------------------------------------- */
+
+
+.card-wrapper .card-FaceArriere {
+    background: #ed5d34;
+    transform: rotateY(180deg);
+}
+
+.card-wrapper:nth-child(even) .card-FaceArriere {
+    background-color: #335494;
+}
+
+.card-wrapperBis .card-FaceArriere {
+    background: #335494;
+    transform: rotateY(180deg);
+}
+
+.card-wrapperBis:nth-child(even) .card-FaceArriere {
+    background-color: #ed5d34;
+}
