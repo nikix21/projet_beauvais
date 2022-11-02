@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Agglo Beauvais</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap-4.6.2-dist/css/bootstrap.min.css">
+        <link href="hamburgers-master/dist/hamburgers.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js" integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="js/index.js"></script>
+        <script>
+          var $hamburger = $(".hamburger");
+          $hamburger.on("click", function(e) {
+            $hamburger.toggleClass("is-active");
+            // Do something else, like open/close menu
+          });
+        </script>
+    </head>
+    <body>
+        <header>
+        </header>
+
+        <h1 id="rejoindre">Nous rejoindre :</h1>
+        <div class="formulaire">
+          <form action="#/ma page de traitement" method="POST" id="inscription">
+            <section>
+                <h2>Information du contact</h2>
+                <fieldset>
+                    <ul>
+                        <li>
+                            <label for="Titre1">
+                                <input type="radio" id="Titre1" name="Titre" value="M.">Monsieur</label>
+                        </li>
+                        <li>
+                            <label for="Titre2">
+                                <input type="radio" id="Titre2" name="Titre" value="M.">Madame</label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <p>
+                    <label class="infoperso" for="Name">Nom</label>
+                    <input class="infoperso" type="text" id="Name" name="Username" required>
+                </p>
+                <p>
+                    <label class="infoperso" for="Name">Email</label>
+                    <input class="infoperso" type="email" id="Name" name="Username" required>
+                </p>
+                <p>
+                    <label class="infoperso" for="Name">Adresse postal</label>
+                    <input class="infoperso" type="text" id="adresse" name="Username" required>
+                </p>
+                <p>
+                  <label class="infoperso" for="Name">Ville</label>
+                  <input class="infoperso" type="text" id="ville" name="Username" required>
+                </p>
+                <p>
+                  <label class="infoperso" for="Name">Code postal</label>
+                  <input class="infoperso" type="text" id="cp" name="Username" required>
+                </p>
+
+              <button type="submit" class="send">envoyer</button>
+            </section>
+            </form>
+        </div>
+
+        <footer>
+          <div class="footer">
+            <div id="réseau">
+              <h4>Nous suivre :</h4>
+              <a href="https://www.facebook.com/beauvaisis"><i class="fa-brands fa-facebook" id="facebook"></i></a>
+            </div>
+            <div id="suivre">
+              <a href="contact.html"><h4>Nous Contacter</h4></a>
+              <a href="index.html#mail"><h4>Recevoir la newsletter</h4></a>
+            </div>
+          </div>
+        </footer>
+    </body>
+</html>

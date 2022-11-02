@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+nav{
+    background-color: #335494;
+    color: white;
+}
+
+.collapse{
+    padding: 0;
+    margin: 0;
+    font-size: 63%;
+}
+
+header nav img{
+    width: 210px;
+    padding: 0;
+    
+}
+
+.nav-link{
+    width: 50%;
+    color: white !important;
+    font-size: 1em;
+}
+
+.nav-item{
+    padding: 20px;
+    /*border: 1px solid white;*/
+    margin: 0;
+}
+
+.dropdown-menu{
+    background-color: #335494 !important;
+    transition: height 4s !important;
+}
+
+.dropdown-item{
+    color: #fff !important;
+    font-size: 65%;
+    transition: width 2s;
+}
+
+.dropdown-item:hover{
+    background-color: orange !important;
+}
+
+.nav-link:hover .dropdown-menu{
+    display: block;
+}
+
+@media screen and (max-width: 830px){
+    .slider{
+        display: none;
+    }
+    .corpPage{
+        flex-direction: column;
+    }
+    .actu{
+        margin: 0 auto;
+        width: 200px;
+    }
+    .actuCard{
+        transition: none;
+    }
+    .autres{
+        margin: 0 auto;
+        width: 200px;
+        padding: 15px;
+    }
+    .ServiceBeauvias{
+        flex-direction: column;
+    }
+    .tourismeCard{
+        border: 3px solid blue;
+        position: absolute;
+    }
+    .serviceTerritoriaux{
+        flex-direction: column;
+    }
+    .territoirCard:nth-child(1){
+        width: 200px;
+        height: 260px;
+    }
+    #mail{
+        width: 400px !important;
+    }
+}
+
+@media only screen and (min-width: 830px){
+    .tourismeCard{
+        margin-left: 7em;
+    }
+    #réseau{
+        margin-left: 300px;
+    }
+}
+
+@media only screen and (max-width: 615px){
+    .mail{
+        width: 400px;
+    }
+}
+/*********************************fin navbar************************************/
+
+.slider {
+    height: 50vh;
+    position: relative;
+    /*margin: 15px 0 15px 0;*/
+}
+
+.slider img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+.slider img.active {
+    opacity: 1;
+}
+
+.suivant, .precedent {
+    color: #fff;
+    font-size: 2.25rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.suivant {
+    right: 1rem;
+}
+
+.precedent {
+    left: 1rem;
+}
+
+.corpPage{
+    display: flex;
+    justify-content: center;
+    margin: 1px;
+    font-family: Oswald;
+    background-size: cover;
+    background-position: bottom;
+    margin: 15px;
+}
+
+
+.corpPage h3{
+    color: orange;
+}
+
+
+.actuCard{
+    font-weight: bold;
+    position: relative;
+    width: 240px;
+    height: 200px;
+    padding: 30px;
+    transition: all 1s;
+    border-radius: 8px;
+    box-shadow: 10px 2px 10px orange;
+}
+
+.actuCard p {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    width: 30px;
+    color: orange;
+    visibility: hidden;
+}
+
+.actuCard:hover p{
+    filter: none;
+    visibility: visible;
+}
+
+.actuCard:hover{
+    width: 300px;
+    height: 260px;
+    filter: brightness(55%);
+    cursor: pointer;
+}
+
+.actuCard:nth-child(2){
+    background: url("../image/accompagnement-professionnel.jpg");
+    background-size: cover;
+    background-position: bottom;
+}
+
+.actuCard:nth-child(4){
+    background: url("../image/relais-tourisme.jpg");
+    background-size: cover;
+    background-position: bottom;
+}
+
+.actuCard:nth-child(6){
+    background: url("../image/tri.jpg");
+    background-size: cover;
+    background-position: bottom;
+}
+
+.autres{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10em;
+    justify-content: center;
+    text-align: center;
+}
+
+.autres h4{
+    color: #335494;
+}
+
+.ServiceBeauvias{
+    display: flex;
+    justify-content: center;
+}
+.ServiceBeauvias .titre{
+    flex-direction: row;
+}
+.beauvaisCard{
+    font-weight: bold;
+    position: relative;
+    width: 200px;
+    height: 160px;
+    padding: 30px;
+    margin: 5px;
+    cursor: pointer;
+    transition: all 1s;
+    border-radius: 8px;
+    box-shadow: 10px 2px 10px #335494;
+}
+
+.beauvaisCard p{
+    visibility: hidden;
+    margin-top: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30px;
+}
+
+.beauvaisCard:hover{
+    width: 300px;
+    height: 260px;
+    filter: brightness(55%);
+    cursor: pointer;
+}
+
+.beauvaisCard:nth-child(1){
+    background: url("../image/BeauvaisisCulture.jpg");
+    background-size: cover;
+    background-position: bottom;
+}
+
+.beauvaisCard:nth-child(2){
+    background: url("../image/beauvais.jfif");
+    background-size: cover;
+    background-position: bottom;
+}
+
+.beauvaisCard:hover p{
+    color: #335494;
+    visibility: visible;
+} 
+
+.tourismeCard{
+    background: url("../image/aeroport.jpg");
+    background-size: cover;
+    background-position: bottom;
+    font-weight: bold;
+    position: relative;
+    width: 200px;
+    height: 160px;
+    transition: all 1s;
+    border-radius: 8px;
+    box-shadow: 10px 2px 10px orange;
+}
+
+#corotitre{
+    margin-left: 2.85em;
+}
+
+.tourismeCard p{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 115px;
+    width: 30px;
+    color: orange;
+    visibility: hidden;
+}
+
+.tourismeCard:hover{
+    width: 300px;
+    height: 260px;
+    filter: brightness(55%);
+    cursor: pointer;
+}
+
+.tourismeCard:hover p{
+    visibility: visible;
+}
+
+.serviceTerritoriaux{
+    display: flex;
+}
+
+#teritotire{
+    margin-top: 0.5em;
+}
+
+
+.territoirCard{
+    font-weight: bold;
+    position: relative;
+    width: 200px;
+    height: 160px;
+    padding: 30px;
+    margin: 5px;
+    cursor: pointer;
+    border: 1px solid black;
+    transition: all 1s;
+    border-radius: 8px;
+    box-shadow: 10px 2px 10px #335494;
+}
+
+.territoirCard p {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+    width: 30px;
+    color: orange;
+    visibility: hidden;
+}
+
+.territoirCard:nth-child(1):hover{
+    width: 200px;
+    height: 260px;
+    filter: brightness(55%);
+    cursor: pointer;
+}
+
+.territoirCard:nth-child(2):hover{
+    width: 300px;
+    height: 260px;
+    filter: brightness(55%);
+    cursor: pointer;
+}
+
+.territoirCard:hover p{
+    visibility: visible;
+}
+
+.territoirCard:nth-child(1){
+    background: url("../image/franckpresident.jpg");
+    background-size: cover;
+    background-position: bottom;
+}
+
+.territoirCard:nth-child(2){
+    background: url("../image/ue.png");
+    background-size: cover;
+    background-position: bottom;
+}
+
+#mail{
+    color: #335494;
+    font-family: Oswald;
+    border: 1px solid black;
+    justify-content: center;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 18px;
+    box-shadow: 10px 10px 10px 5px #335494;
+}
+
+#newsletter{
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+    width: 200px;
+}
+
+footer{
+    margin-top: 50px;
+    /*padding-bottom: 100px;*/
+    height: 200px;
+    background-color: #335494;
+    color: white;
+    bottom: 1;
+}
+
+.footer{
+    display: flex;
+    bottom: 1;
+}
+
+#réseau{
+    width: 50%;
+}
+
+#suivre{
+    width: 50%;
+}
+
+footer a{
+    text-decoration: none !important;
+    color: #fff !important;
+}
+
+footer a:hover 
+{
+    filter: brightness(85%); 
+}
+
+
+/***********************************************************Formulaire****************************************************************/
+.formulaire{
+    width: 60%;
+    margin: 0 auto;
+}
+
+#rejoindre{
+    color: orange;
+}
+#inscription{
+    border: 1px solid black;
+    padding: 1em;
+    border-radius: 5%;
+    background-color: #335494;
+    text-align: center;
+    box-shadow: 10px 10px 10px orange;
+    color: #fff;
+}
+
+ul{
+    list-style-type: none;
+    text-align: center;
+}
+/***********************************************************Fin du Formulaire****************************************************************/
