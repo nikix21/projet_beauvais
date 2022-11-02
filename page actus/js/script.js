@@ -1,30 +1,32 @@
 
-
-var elm;
+var btn;
+var liens;
 var ouvert;
+var corps;
 
 function init() {
     ouvert = false;
-    elm = document.getElementById("test");
-    dav = document.getElementById("ouin");
+    btn = document.getElementById("btnHmbg");
+    liens = document.getElementById("liensNav");
+    corps = document.body;
 
-    elm.addEventListener("click", Switch);
+    btn.addEventListener("click", SwitchNavbar);
+
 }
 
-function Switch() {
+function SwitchNavbar() {
     if (ouvert == false) {
-        elm.classList.add("open")
-        ouin.classList.add("open")
+        btn.classList.add("open")
+        liens.classList.add("open")
+        corps.style.overflow = "hidden";
         ouvert = true;
     }
     else {
-        elm.classList.remove("open")
-        ouin.classList.remove("open")
+        btn.classList.remove("open")
+        liens.classList.remove("open")
+        corps.style.overflowY = "scroll";
         ouvert = false;
-    }
-    
-    
+    } 
 }
-
 
 window.addEventListener("load",init);
