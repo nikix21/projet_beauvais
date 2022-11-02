@@ -1,58 +1,156 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
+
+/******************************************** NAVBAR *************************************************************/
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;
+    background: #fafafa;
+    box-shadow: inset 0px -1px 0px #335494; /* petite bordure en bas */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+#logoNav {
+    width: 200px;
+}
+
+.hamburger {
+    display: none;
+}
+
+.navlinks-container a {
+    font-family: 'Cabin', sans-serif;
+    margin: 0 10px;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #414141;
+    display: inline-block;
+    position: relative;
+}
+
+.navlinks-container a:hover {
+    color: #ed5d34;
+}
+
+@media (max-width: 950px) {
+    nav {
+        padding: 15px 20px;
+        position: relative;
+    }
+
+    .logo {
+        order: 2;
+        margin: 0 auto;
+    }
+
+    #logoNav {
+        width: 175px;
+    }
+
+    .hamburger {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        border: none;
+        display: flex;
+        background: #fafafa;
+        align-items: center;
+        position: relative;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #335494;
+        position: absolute;
+        pointer-events: none;
+        transition: opacity 0.3s 0.15s ease-out;
+    }
+
+    .hamburger span:nth-child(1) {
+        transform: translateY(7px);
+    }
+
+    .hamburger span:nth-child(3) {
+        transform: translateY(-7px);
+    }
+
+    .hamburger span:nth-child(1), .hamburger span:nth-child(3) {
+        transition: transform 0.3s ease-out;
+    }
+
+    .hamburger.open span:nth-child(1) {
+        transform: translate(0) rotate(135deg);
+    }
+
+    .hamburger.open span:nth-child(2) {
+        opacity: 0;
+        transition: opacity 0s ease-out;
+    }
+
+    .hamburger.open span:nth-child(3) {
+        transform: translate(0) rotate(-135deg);
+    }
+
+    .navlinks-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.5);
+        backdrop-filter : blur(8px);
+        align-items: center;
+        top: 100%;
+        left: 0;
+        height: 100vh;
+        padding: 15px 50px 15px 20px;
+        border-right: 1px solid #335494;
+        transform: translate(-100%);
+    }
+
+    .open {
+        transform: translate(0%);
+        z-index: 10;
+    }
+
+    .navlinks-container.open {
+        padding: 80px;
+    }
+
+    .navlinks-container a {
+        font-size: 24px;
+        margin: 10px 0px;
+    }
+
+}
+
+@media (max-width: 500px) {
+    #logoNav {
+        width: 135px;
+    }
+}
+
+/*******************************************************************************************************************/
+
 
 body {
-  margin: 0;
-  padding: 0;
-}
-
-
-nav{
-    background-color: #335494;
-    color: white;
-}
-
-.collapse{
-    padding: 0;
     margin: 0;
-    font-size: 63%;
-}
-
-header nav img{
-    width: 210px;
     padding: 0;
-    
-}
+    font-family: 'Cabin', sans-serif;
+  }
 
-.nav-link{
-    width: 50%;
-    color: white !important;
-    font-size: 1em;
-}
-
-.nav-item{
-    padding: 20px;
-    /*border: 1px solid white;*/
-    margin: 0;
-}
-
-.dropdown-menu{
-    background-color: #335494 !important;
-    transition: height 4s !important;
-}
-
-.dropdown-item{
-    color: #fff !important;
-    font-size: 65%;
-    transition: width 2s;
-}
-
-.dropdown-item:hover{
-    background-color: orange !important;
-}
-
-.nav-link:hover .dropdown-menu{
-    display: block;
-}
 
 @media screen and (max-width: 830px){
     .slider{
@@ -106,7 +204,8 @@ header nav img{
         width: 400px;
     }
 }
-/*********************************fin navbar************************************/
+
+
 
 .slider {
     height: 50vh;
@@ -149,7 +248,7 @@ header nav img{
     display: flex;
     justify-content: center;
     margin: 1px;
-    font-family: Oswald;
+    font-family: 'Cabin', sans-serif;
     background-size: cover;
     background-position: bottom;
     margin: 15px;
@@ -376,7 +475,7 @@ header nav img{
 
 #mail{
     color: #335494;
-    font-family: Oswald;
+    font-family: 'Cabin', sans-serif;
     border: 1px solid black;
     justify-content: center;
     align-content: center;
