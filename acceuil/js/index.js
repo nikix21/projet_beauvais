@@ -6,14 +6,76 @@ var liens;
 var ouvert;
 var corps;
 
+var actu1;
+var actu2;
+var actu3;
+
+var tourisme;
+
+var beauvais;
+var culture;
+
+var territoire;
+var europe;
+
+
 function init() {
     ouvert = false;
     btn = document.getElementById("btnHmbg");
     liens = document.getElementById("liensNav");
     corps = document.body;
 
+    actu1 = document.getElementById("actu1");
+    actu2 = document.getElementById("actu2");
+    actu3 = document.getElementById("actu3");
+
+    tourisme = document.getElementById("tour");
+
+    beauvais = document.getElementById("beauvais");
+    culture = document.getElementById("culture");
+
+    territoire = document.getElementById("territoire");
+    europe = document.getElementById("europe");
+
     btn.addEventListener("click", SwitchNavbar);
 
+    actu1.addEventListener("click", toActu);
+    actu2.addEventListener("click", toActu);
+    actu3.addEventListener("click", toActu);
+
+    tourisme.addEventListener("click", toTourisme);
+
+    culture.addEventListener("click", toCulture)
+    beauvais.addEventListener("click", toBeauvais)
+
+    territoire.addEventListener("click", toTerritoire)
+    europe.addEventListener("click", toEurope)
+
+}
+
+
+function toActu() {
+    location.replace("../page actus/actus.html")
+}
+
+function toTourisme() {
+    location.replace("../tourisme/index.html")
+}
+
+function toCulture() {
+    location.replace("https://culture.beauvais.fr/")
+}
+
+function toBeauvais() {
+    location.replace("http://www.beauvais.fr/")
+}
+
+function toTerritoire() {
+    location.replace("https://www.beauvaisisnotreterritoire.fr/")
+}
+
+function toEurope() {
+    location.replace("http://www.beauvaisis.fr/l-europe-s-engage/developpement-touristique-du-beauvaisis.html")
 }
 
 
@@ -31,6 +93,8 @@ function SwitchNavbar() {
         ouvert = false;
     } 
 }
+
+
 
 window.addEventListener("load",init);
 

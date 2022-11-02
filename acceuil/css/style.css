@@ -497,12 +497,13 @@ body {
 
 footer{
     margin-top: 50px;
-    /*padding-bottom: 100px;*/
     height: 200px;
     background-color: #335494;
     color: white;
     bottom: 1;
 }
+
+
 
 .footer{
     display: flex;
