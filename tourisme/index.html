@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+    integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
+    <title>TOURISME</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+    </style>
+</head>
+    <table class="presentation">
+        <tr><td><h1 class="titre">TOURISME</h1></td></tr>
+        <tr>
+            <td> <p class="content"> L'agglomération du Beauvaisis est une communauté d'agglomération française, située dans le département de l'Oise et la région Hauts-de-France.
+                Elle associe la ville-centre de Beauvais ainsi que ses communes périphériques pour une superficie de 539 km². 
+                Elle a été crée le 1er janvier 2017 et elle comptait 103 191 habitants en 2018 avec un densité de 191 habitants/km².
+                L'agglomération du Beauvaisis dispose de somptueux sites à voir et d'activités à faire.
+                Pour plus d'infomations sur ces derniers, vous pouvez retrouver le site de l'office de tourisme de Beauvais 
+                en cliquant <a href="https://www.visitbeauvais.fr/" target="_blank" style="color: rgb(255, 94, 0);">ici</a>.</p> </td>       
+                <td class="colonne"> <a href="https://www.visitbeauvais.fr" target="_blank"> <img src="images/paysage.png" class="image"/> </a> </td>
+            </tr>
+    </table>
+    <h1 class="titrelieux">MEILLEURS LIEUX À VISTER</h1>
+    <table class="lieux1">
+       <tr>
+            <td class="colonne1"> <a href="https://www.visitbeauvais.fr/fiche/cathedrale-saint-pierre-de-beauvais/" target="_blank"> <img src="images/cathédrale.jpg" href="#" class="cathedrale" /> </a> </td>
+            <td> <p class="content">La cathédrale Saint-Pierre de Beauvais est une église catholique située à Beauvais, dans le département français de l'Oise en région Hauts-de-France. Elle est la cathédrale du diocèse de Beauvais.
+                Sa construction est contemporaine de celle des cathédrales de Chartres, de Reims, de Bourges et d'Amiens.
+                Elle possède le plus haut chœur gothique au monde1 (48,50 m) sous voûte. De 1569 à 1573 la cathédrale de Beauvais fut avec sa tour de 153 mètres la plus haute construction humaine du monde. Ses concepteurs avaient l'ambition d'en faire la plus grande cathédrale gothique de France devant celle d'Amiens. Victime de deux écroulements, l'un au xiiie siècle, l'autre au xvie siècle, elle reste aujourd'hui inachevée, seuls le chœur et le transept ont été construits.
+                Elle est affiliée à la paroisse Saint-Pierre-Saint-Paul en Beauvaisis de Beauvais-Centre. </p></td>
+        </tr>
+    </table>
+    <hr>
+    <table class="lieux2">
+        <tr>
+            <td class="colonne1"> <a href="http://www.beauvais.fr/culture/quadrilatere-galerie-nationale-de-la-tapisserie.html" target="_blank"> <img src="images/quadrilatere.jpg" class="quadrilatere" > </a> </td>
+            <td> <p class="content"> Repris par la Ville en 2013, Le Quadrilatère propose aujourd’hui une programmation qui s'étend à l'ensemble des disciplines artistiques, tout en valorisant les liens entre patrimoine et création contemporaine. 
+                Dans le cadre du label Ville d’art et d’histoire, l'espace patrimonial situé au cœur du bâtiment vous invite à la découverte de plus de 2000 ans d’histoire de Beauvais, 
+                de son évolution urbaine et de la singularité du bâtiment qui intègre une tour de l’enceinte antique, des vestiges archéologiques et des remparts gallo-romain. 
+                Le Quadrilatère conduit une dynamique politique d’expositions temporaires en résonance avec l’évolution des pratiques artistiques contemporaines. Ses missions de création, 
+                de médiation et de diffusion sont envisagées comme autant d’espaces collectifs de production de sens au sein duquel artistes et visiteurs participent à une expérimentation sur ce qui construit et motive notre rapport à l’art contemporain. </p> </td>
+        </tr>
+    </table>
+    <hr>  
+    <table class="lieux3">
+        <tr>
+            <td class="colonne1"> <a href="https://mudo.oise.fr/" target="_blank"> <img src="images/musée.jpg" class="musee"> </a> </td>
+            <td> <p class="content"> Le musée de l'Oise est un musée situé au cœur de Beauvais (Oise), dans les Hauts-de-France, au pied de la cathédrale, dans l'ancien palais épiscopal, classé monument historique.
+                Le musée est installé dans l’ancien palais épiscopal, résidence des évêques de Beauvais, comtes de la ville et pairs de France. Ce très bel ensemble architectural est édifié au pied de la cathédrale de Beauvais au XIIe siècle par Henri de France, frère du roi. 
+                Il a été bâti sur le rempart romain. Au XIVe siècle, pour affirmer son autorité suite à une émeute des habitants de la ville, l’évêque fait ériger une entrée fortifiée munie de deux tours. </p>
+            </td>
+        </tr>
+    </table>
+
+    <table class="last">
+        <tr>
+            <td class="meteo">
+                <img src="images/meteo.png" class="imgmeteo" >
+                <div id="msgmeteo"></div>
+            </td>
+            <td class="corolis">
+                <a href="https://www.corolis.fr/" target="_blank"> <img src="images/corolis.jpg" class="corolisimg"> </a>
+            </td>
+            <td class="map">
+                <div id="map"></div>
+            </td>
+        </tr>
+    </table>
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+    integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
